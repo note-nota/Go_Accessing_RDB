@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - "./db/initdb.d:/docker-entrypoint-initdb.d"
+      - "./db/conf.d:/etc/mysql/conf.d"
+    ports:
+      - "3333:3306"
+    environment:
+      - MYSQL_DATABASE=recordings
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=mysql
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=UTC
