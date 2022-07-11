@@ -1,2 +1,12 @@
 # Go_Accessing_RDB
-Tutorial: Accessing a relational database
+
+[Tutorial: Accessing a relational database](https://go.dev/doc/tutorial/database-access)
+
+# イントロダクション
+
+このチュートリアルでは、Goとその標準ライブラリのdatabase/sqlパッケージを使用してリレーショナルデータベースにアクセスするための基本を紹介します。
+
+使用database/sqlするパッケージには、データベースへの接続、トランザクションの実行、進行中の操作のキャンセルなどのタイプと関数が含まれています。パッケージの使用の詳細については、 [データベースへのアクセス](https://go.dev/doc/database/)を参照してください。
+
+このチュートリアルでは、データベースを作成してから、データベースにアクセスするためのコードを記述します。サンプルプロジェクトは、ビンテージジャズレコードに関するデータのリポジトリになります。
+
