@@ -77,7 +77,9 @@ func albumsByArtist(name string) ([]Album, error) {
 	if err != nil {
 		return nil, fmt.Errorf("albumsByArtist %q: %v", name, err)
 	}
-	defer rows.Close()
+	defer func(rows *sql.Rows) {
+		_ = rows.Close()
+	}(rows)
 
 	// Loop through rows, using Scan to assign column data to struct fields.
 	for rows.Next() {
